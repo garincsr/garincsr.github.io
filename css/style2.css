@@ -1,0 +1,112 @@
+body{
+    color: #fff;
+     background-image: url('../img/bg-img.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+}
+.border{
+  margin-left: 40%;
+  margin-right: 40%;
+  border: 5px solid white;
+}
+/* From cssbuttons.io by @adamgiebl */
+button {
+  background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 1em 2em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  transition: all .5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+ }
+ 
+ button:hover {
+  animation: gradient 3s infinite;
+  transform: scale(1.05);
+ }
+ 
+ button:active {
+  animation: gradient 3s infinite;
+  transform: scale(0.8);
+ }
+ 
+ @keyframes gradient {
+  0% {
+   background-position: 0% 50%;
+  }
+ 
+  50% {
+   background-position: 100% 50%;
+  }
+ 
+  100% {
+   background-position: 0% 50%;
+  }
+ }
+h1{
+  font-size: 90px;
+  text-align: center;
+  font-family: 'Rubik Wet Paint', cursive;
+  margin: 10px;
+}
+h2{
+  font-size: 60px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.container {
+  width: 60%;
+  padding-left: 5%;
+  margin: auto;
+  cursor: url(../img/pistol1.png), auto;
+}
+
+.container:active {
+  cursor: url(../img/pistolfire1.png), auto;
+}
+
+.tanah {
+  padding-bottom: 5%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/bush.png) bottom center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/tikus-berdasi.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 180px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -15px;
+}
